@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celebrity Hammer — Ice Cream Splash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hud">
+    <div class="brand">🍦 Celebrity Hammer</div>
+    <div class="controls"><button id="startBtn">Start</button><button id="resetBtn" disabled>Reset</button></div>
+    <div class="stats">
+      <span>⏱️ Time: <strong id="time">30.0</strong>s</span>
+      <span>💯 Score: <strong id="score">0</strong></span>
+    </div>
+  </div>
+
+  <div id="game" class="game" aria-label="game board" role="application">
+    <div class="grid" id="grid" aria-live="polite">
+      <div class="hole" data-idx="0"><div class="mask"></div></div>
+      <div class="hole" data-idx="1"><div class="mask"></div></div>
+      <div class="hole" data-idx="2"><div class="mask"></div></div>
+      <div class="hole" data-idx="3"><div class="mask"></div></div>
+      <div class="hole" data-idx="4"><div class="mask"></div></div>
+      <div class="hole" data-idx="5"><div class="mask"></div></div>
+      <div class="hole" data-idx="6"><div class="mask"></div></div>
+      <div class="hole" data-idx="7"><div class="mask"></div></div>
+      <div class="hole" data-idx="8"><div class="mask"></div></div>
+      <div id="splash-layer" class="splash-layer" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div id="endOverlay" class="overlay hidden" aria-hidden="true">
+    <div class="endcard">
+      <div class="bigscore" id="bigScore">Score: 0</div>
+      <button id="playAgainBtn" class="playagain">Start</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Tap/click leaves a configurable ice-cream <em>splash</em> right where you thwack. Stain on face still lingers.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
